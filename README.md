@@ -34,7 +34,7 @@ Detect performance anomalies from CloudWatch logs and group system behavior patt
 - Pandas, NumPy
 - scikit-learn, scikit-learn-extra
 - Seaborn, Matplotlib
-- AWS CloudWatch (data source), Kinesis (optional stream)
+- AWS CloudWatch (data source), Kinesis
 - SageMaker or Lambda (for real-time inference deployment - optional)
 
 ---
