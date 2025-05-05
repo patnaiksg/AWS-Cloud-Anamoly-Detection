@@ -38,3 +38,8 @@ Detect performance anomalies from CloudWatch logs and group system behavior patt
 - SageMaker or Lambda (for real-time inference deployment - optional)
 
 ---
+
+## Dashboard Preview
+
+- ![Dashboard Screenshot 1](dash1.png)
+- ![Dashboard Screenshot 2](dash2.png)
