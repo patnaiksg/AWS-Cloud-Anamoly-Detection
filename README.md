@@ -60,13 +60,13 @@ Our goal: Leverage unsupervised learning to detect, profile, and explain anomali
 
 ## Limitations & Assumptions
 
-#Data limitations:
+- Data limitations:
 Dataset lacks explicit labeled failures/incidents—evaluation is fully unsupervised.
-#Assumptions:
+- Assumptions:
 Selected 10 core features are representative of overall cloud resource behavior.
 Clusters identified via unsupervised learning truly reflect distinct operational states and anomalies.
 Hyperparameter tuning (k, eps, min_samples) was performed using a limited grid due and might not be the same for all cloud scenarios.
-#Model limitations:
+- Model limitations:
 Some true anomalies may be missed if they do not create clear feature separation.
 Real-time applicability and generalizability to other cloud workloads need further validation.
 
