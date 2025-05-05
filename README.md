@@ -10,6 +10,18 @@ Detect performance anomalies from CloudWatch logs and group system behavior patt
 
 ---
 
+## Motivation & Purpose
+Cloud applications power critical business operations and services.
+Even brief performance incidents or anomalies can cause significant financial, reputational, and operational impact.
+Manual detection is often too slow, leading to delayed incident response and longer downtime.
+
+
+Data-driven, automated anomaly detection enables:
+Proactive incident management
+Better resource optimization and cost savings
+Enhanced service reliability and user experience
+Our goal: Leverage unsupervised learning to detect, profile, and explain anomalies in real-world cloud application metrics.
+
 ## 📊 Features
 
 - 📥 Stream data from CloudWatch CSV (simulated or real-time via Kinesis)
@@ -43,3 +55,39 @@ Detect performance anomalies from CloudWatch logs and group system behavior patt
 
 - ![Dashboard Screenshot 1](dash1.png)
 - ![Dashboard Screenshot 2](dash2.png)
+
+---
+
+## Limitations & Assumptions
+
+#Data limitations:
+Dataset lacks explicit labeled failures/incidents—evaluation is fully unsupervised.
+#Assumptions:
+Selected 10 core features are representative of overall cloud resource behavior.
+Clusters identified via unsupervised learning truly reflect distinct operational states and anomalies.
+Hyperparameter tuning (k, eps, min_samples) was performed using a limited grid due and might not be the same for all cloud scenarios.
+#Model limitations:
+Some true anomalies may be missed if they do not create clear feature separation.
+Real-time applicability and generalizability to other cloud workloads need further validation.
+
+---
+
+## Future Scope
+
+Cross-Service Anomaly Correlation:
+Expand the project to correlate with more anomalies across AWS services (e.g., EC2, RDS, S3) to detect systemic issues and complex failure chains in distributed systems.
+
+
+Alert Optimization:
+Incorporate classification models to predict risk severity proactively (before anomaly occurs) and optimize alert thresholds to reduce false positives/alert fatigue.
+
+
+Incorporate feedback loop: 
+Integrate engineer-validated incident labels to retrain and refine anomaly models (semi-supervised learning).
+
+
+More Interactive Dashboards: Display additional system health data to enable enhanced monitoring.
+
+---
+
+
