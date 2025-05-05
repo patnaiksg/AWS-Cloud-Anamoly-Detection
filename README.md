@@ -40,6 +40,34 @@ Our goal: Leverage unsupervised learning to detect, profile, and explain anomali
 
 ---
 
+## Project Flow
+### 📥 Stream Metrics via Kinesis
+- A Python script reads metric rows from a CSV file.
+- Each row is serialized to a Kinesis Data Stream (cloudwatch-metrics-stream).
+
+### 🤖 Predict Cluster (Risk) Label in Lambda
+
+- A Lambda function is triggered on each Kinesis record.
+- It loads a pre-trained clustering model (KMeans, DBSCAN, etc.) and scaler.
+- The metric data is transformed, and a cluster label (risk level) is predicted.
+
+### Display in Dashboard
+Our dashboard fetches labeled risk levels of instances in real time.
+
+Displays:
+- Risk label distribution (e.g., bar chart)
+- Recent metrics with anomaly highlights
+- Future Work: time-series trends within the dashboard for better instance health monitoring
+
+### Trigger Alerts
+
+If the predicted cluster label matches a known anomaly or high-risk cluster:
+- Sends an SNS alert (email, Slack, etc.)
+
+
+
+---
+
 ## 🛠️ Tech Stack
 
 - Python 3.x
@@ -74,15 +102,15 @@ Real-time applicability and generalizability to other cloud workloads need furth
 
 ## Future Scope
 
-Cross-Service Anomaly Correlation:
+- Cross-Service Anomaly Correlation:
 Expand the project to correlate with more anomalies across AWS services (e.g., EC2, RDS, S3) to detect systemic issues and complex failure chains in distributed systems.
 
 
-Alert Optimization:
+- Alert Optimization:
 Incorporate classification models to predict risk severity proactively (before anomaly occurs) and optimize alert thresholds to reduce false positives/alert fatigue.
 
 
-Incorporate feedback loop: 
+- Incorporate feedback loop: 
 Integrate engineer-validated incident labels to retrain and refine anomaly models (semi-supervised learning).
 
 
