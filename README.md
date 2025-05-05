@@ -4,7 +4,7 @@ This project provides an end-to-end framework to stream, cluster, and visualize 
 
 ---
 
-## 📌 Objective
+## Objective
 
 Detect performance anomalies from CloudWatch logs and group system behavior patterns into risk-based clusters using unsupervised machine learning — with free-tier AWS services and open-source Python tooling.
 
@@ -22,30 +22,30 @@ Better resource optimization and cost savings
 Enhanced service reliability and user experience
 Our goal: Leverage unsupervised learning to detect, profile, and explain anomalies in real-world cloud application metrics.
 
-## 📊 Features
+## Features
 
-- 📥 Stream data from CloudWatch CSV (simulated or real-time via Kinesis)
-- 📈 Feature Engineering & Scaling
-- 🤖 Clustering Models:
+- Stream data from CloudWatch CSV (simulated or real-time via Kinesis)
+- Feature Engineering & Scaling
+- Clustering Models:
   - KMeans with Elbow Method
   - DBSCAN for noise detection
   - Ensemble Clustering (KMeans + DBSCAN)
   - Hierarchical Clustering with Dendrogram
   - KMedoids (robust clustering)
-- 🧠 Risk-based cluster labeling (Idle, Normal, High Load, Critical)
-- 🔥 Anomaly identification using latency, CPU, and active connections
-- 📊 Heatmaps for per-feature intensity
-- 🧬 PCA-based visualizations
-- 📌 Auto risk-tagging & alert logic (planned for Lambda/SNS integration)
+- Risk-based cluster labeling (Idle, Normal, High Load, Critical)
+- Anomaly identification using latency, CPU, and active connections
+- Heatmaps for per-feature intensity
+- PCA-based visualizations
+- Auto risk-tagging & alert logic (planned for Lambda/SNS integration)
 
 ---
 
 ## Project Flow
-### 📥 Stream Metrics via Kinesis
+### Stream Metrics via Kinesis
 - A Python script reads metric rows from a CSV file.
 - Each row is serialized to a Kinesis Data Stream (cloudwatch-metrics-stream).
 
-### 🤖 Predict Cluster (Risk) Label in Lambda
+### Predict Cluster (Risk) Label in Lambda
 
 - A Lambda function is triggered on each Kinesis record.
 - It loads a pre-trained clustering model (KMeans, DBSCAN, etc.) and scaler.
