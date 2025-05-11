@@ -104,7 +104,9 @@ If the predicted cluster label matches a known anomaly or high-risk cluster:
 
 ## Dashboard Preview
 
+- Live Dashboard to monitor the current risk level of the resources and operating conditions.
 - ![Dashboard Screenshot 1](dash1.png)
+- FIlter out instances with critical conditions as necessary.
 - ![Dashboard Screenshot 2](dash_2.png)
 
 ---
