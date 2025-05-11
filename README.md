@@ -105,7 +105,7 @@ If the predicted cluster label matches a known anomaly or high-risk cluster:
 ## Dashboard Preview
 
 - ![Dashboard Screenshot 1](dash1.png)
-- ![Dashboard Screenshot 2](dash2.png)
+- ![Dashboard Screenshot 2](dash_2.png)
 
 ---
 
