@@ -1,6 +1,30 @@
 # AWS CloudWatch Anomaly Detection & Clustering Dashboard
 
-This project provides an end-to-end framework to stream, cluster, and visualize performance metrics from AWS CloudWatch using multiple unsupervised learning techniques.
+This project demonstrates a **real-time anomaly detection pipeline** using simulated **Amazon CloudWatch performance metrics**. It is fully compatible with the **AWS Cloud** and utilizes **Kinesis**, **Lambda**, **DynamoDB** .
+
+It’s designed to help **identify performance anomalies** in compute resources like EC2 by clustering real-time metrics and classifying unusual behavior as high-risk — allowing for early detection and response.
+
+Modern cloud applications generate massive volumes of real-time performance telemetry across compute, storage, and network layers. While this data is critical for maintaining availability and performance, it becomes increasingly difficult to detect critical anomalies in real time due to sheer scale and complexity.
+
+Traditional anomaly detection systems often operate as binary detectors — labeling data as "normal" or "anomalous" — without any contextual understanding of business impact. This results in:
+
+-❗ Alert fatigue due to false positives and low-priority noise
+-🧍‍♂️ Manual triaging of alerts, delaying responses to critical incidents
+- 📉 Reactive monitoring, where damage is already done before detection
+
+#💡 Our Solution
+We introduce an Adaptive Risk Scoring Mechanism integrated with a real-time streaming pipeline. It’s designed to:
+- ✅ Assign dynamic risk levels to anomalies based on resource behavior, system context, and historical trends
+- ✅ Reduce alert noise by intelligently suppressing low-impact anomalies
+- ✅ Prioritize critical issues through cluster-based severity tagging
+- ✅ Enable proactive monitoring with clear anomaly categorization (e.g., CPU bottleneck, network saturation)
+
+# 🔍 Key Differentiators
+- Cluster-aware anomaly ranking using unsupervised learning (KMeans/DBSCAN)
+- Lightweight real-time pipeline using AWS Kinesis, Lambda, and DynamoDB
+- Scalable risk labeling based on performance signatures instead of static thresholds
+- Live dashboard visualization for engineering and operations teams to act swiftly
+
 
 ---
 
